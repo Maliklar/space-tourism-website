@@ -18,7 +18,7 @@
         :src="
           require(`../../assets/crew/${$store.state.selectedCrew.images.png}`)
         "
-        alt="ve"
+        :alt="$store.state.selectedCrew.name"
       />
     </div>
   </div>

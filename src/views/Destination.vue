@@ -27,15 +27,6 @@ export default {
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  line-height: 34px;
-  /* identical to box height */
-
   letter-spacing: 4.725px;
-}
-
-.redbox {
-  background-color: red;
-  height: 200px;
-  width: 200px;
 }
 </style>
