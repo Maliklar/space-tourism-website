@@ -2,14 +2,16 @@
   <div class="destination-view">
     <h1><span>01 </span> PICK YOUR DESTINATION</h1>
     <div class="destination-view-body">
-      <img src="../assets/destination/image-moon.png" alt="MoonIMage" />
-      <div class="redbox"></div>
+      <Carousel />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import Carousel from "../components/destination/Carousel.vue";
+export default {
+  components: { Carousel },
+};
 </script>
 
 <style>
