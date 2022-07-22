@@ -16,9 +16,9 @@ export default {};
   font-weight: 400;
   font-size: 32px;
   line-height: 37px;
-
+  background-color: white;
   letter-spacing: 2px;
-
+  border: none;
   color: #0b0d17;
 }
 </style>

@@ -1,12 +1,12 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+    state: {
+        currentRoute: "home",
+        app: document.getElementById("app"),
+        deviceType: "desktop",
+    },
+    mutations: {},
+    actions: {},
+    modules: {}
+});
