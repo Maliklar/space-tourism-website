@@ -1,5 +1,7 @@
 <template>
-  <div class="technology-view"></div>
+  <div class="crew-slider">
+    <h1>CREW SLIDER</h1>
+  </div>
 </template>
 
 <script>

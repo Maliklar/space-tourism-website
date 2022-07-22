@@ -1,14 +1,58 @@
 <template>
   <div class="carousel-tab">
-    <div class="tab-item active">MOON</div>
-    <div class="tab-item">MARS</div>
-    <div class="tab-item">EUROPA</div>
-    <div class="tab-item">TITAN</div>
+    <div class="tab-item" :class="{ active: moon }" @click="toggleTab(0)">
+      MOON
+    </div>
+    <div class="tab-item" :class="{ active: mars }" @click="toggleTab(1)">
+      MARS
+    </div>
+    <div class="tab-item" :class="{ active: europa }" @click="toggleTab(2)">
+      EUROPA
+    </div>
+    <div class="tab-item" :class="{ active: titan }" @click="toggleTab(3)">
+      TITAN
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  created() {
+    this.$store.state.selectedDestination = this.$store.state.destinations[0];
+  },
+  data() {
+    return {
+      moon: true,
+      mars: false,
+      europa: false,
+      titan: false,
+    };
+  },
+  methods: {
+    toggleTab(index) {
+      this.$store.state.selectedDestination =
+        this.$store.state.destinations[index];
+
+      this.moon = false;
+      this.mars = false;
+      this.europa = false;
+      this.titan = false;
+
+      if (index == 0) {
+        this.moon = true;
+      }
+      if (index == 1) {
+        this.mars = true;
+      }
+      if (index == 2) {
+        this.europa = true;
+      }
+      if (index == 3) {
+        this.titan = true;
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -26,6 +70,7 @@ export default {};
   line-height: 19px;
   letter-spacing: 2.7px;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .tab-item.active {

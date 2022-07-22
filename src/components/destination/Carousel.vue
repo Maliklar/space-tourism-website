@@ -1,24 +1,29 @@
 <template>
   <div class="destination-carousel">
-    <img src="../../assets/destination/image-moon.png" alt="MoonIMage" />
+    <img
+      :src="
+        require(`../../assets/destination/${$store.state.selectedDestination.images.png}`)
+      "
+      :alt="$store.state.selectedDestination.name"
+    />
+
     <div class="carousel-details">
       <CarouselTab />
-      <h1>MOON</h1>
+      <h1>
+        {{ $store.state.selectedDestination.name }}
+      </h1>
       <p>
-        See our planet as you’ve never seen it before. A perfect relaxing trip
-        away to help regain perspective and come back refreshed. While you’re
-        there, take in some history by visiting the Luna 2 and Apollo 11 landing
-        sites.
+        {{ $store.state.selectedDestination.description }}
       </p>
       <div class="vertical-line"></div>
       <div class="travel-details">
         <div class="item">
           <span>AVG. DISTANCE</span>
-          <h2>384,400 KM</h2>
+          <h2>{{ $store.state.selectedDestination.distance }}</h2>
         </div>
         <div class="item">
           <span>EST. TRAVEL TIME</span>
-          <h2>3 DAYS</h2>
+          <h2>{{ $store.state.selectedDestination.travel }}</h2>
         </div>
       </div>
     </div>
@@ -56,7 +61,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 100px;
-  /* line-height: 115px; */
+  text-transform: uppercase;
 }
 .vertical-line {
   margin-top: 54px;
