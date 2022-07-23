@@ -4,23 +4,26 @@
     <div class="h-line"></div>
     <nav>
       <div class="menu-link desktop tablet" :class="{ active: home }">
-        <router-link class="router-link" to="/">
-          <span class="desktop">00</span> HOME
+        <router-link class="router-link" to="/space-tourism-website">
+          <span class="desktop-inline">00</span> HOME
         </router-link>
       </div>
       <div class="menu-link desktop tablet" :class="{ active: destination }">
-        <router-link class="router-link" to="/destination">
-          <span class="desktop">01</span> DESTINATION
+        <router-link
+          class="router-link"
+          to="/space-tourism-website/destination"
+        >
+          <span class="desktop-inline">01</span> DESTINATION
         </router-link>
       </div>
       <div class="menu-link desktop tablet" :class="{ active: crew }">
-        <router-link class="router-link" to="/crew">
-          <span class="desktop">02</span> CREW
+        <router-link class="router-link" to="/space-tourism-website/crew">
+          <span class="desktop-inline">02</span> CREW
         </router-link>
       </div>
       <div class="menu-link desktop tablet" :class="{ active: technology }">
-        <router-link class="router-link" to="/technology">
-          <span class="desktop">03</span> TECHNOLOGY
+        <router-link class="router-link" to="/space-tourism-website/technology">
+          <span class="desktop-inline">03</span> TECHNOLOGY
         </router-link>
       </div>
       <img
@@ -147,6 +150,9 @@ nav {
 .desktop {
   display: flex;
 }
+.desktop-inline {
+  display: inline;
+}
 
 @media screen and (max-width: 800px) {
   header {
@@ -167,6 +173,9 @@ nav {
     font-size: 14px;
   }
   .desktop {
+    display: none;
+  }
+  .desktop-inline {
     display: none;
   }
   .tablet {

@@ -3,22 +3,22 @@
     <img src="../assets/shared/icon-close.svg" @click="close" alt="Close" />
 
     <div class="menu-link desktop tablet" :class="{ active: home }">
-      <router-link class="router-link" to="/">
+      <router-link class="router-link" to="/space-tourism-website">
         <span class="desktop">00</span> HOME
       </router-link>
     </div>
     <div class="menu-link desktop tablet" :class="{ active: destination }">
-      <router-link class="router-link" to="/destination">
+      <router-link class="router-link" to="/space-tourism-website/destination">
         <span class="desktop">01</span> DESTINATION
       </router-link>
     </div>
     <div class="menu-link desktop tablet" :class="{ active: crew }">
-      <router-link class="router-link" to="/crew">
+      <router-link class="router-link" to="/space-tourism-website/crew">
         <span class="desktop">02</span> CREW
       </router-link>
     </div>
     <div class="menu-link desktop tablet" :class="{ active: technology }">
-      <router-link class="router-link" to="/technology">
+      <router-link class="router-link" to="/space-tourism-website/technology">
         <span class="desktop">03</span> TECHNOLOGY
       </router-link>
     </div>
@@ -84,7 +84,7 @@ export default {
   z-index: 999;
   background-color: rgba(59, 59, 59, 0.322);
   backdrop-filter: blur(50px);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: start;
   gap: 40px;
