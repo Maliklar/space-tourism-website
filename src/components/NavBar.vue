@@ -3,28 +3,41 @@
     <img src="../assets/shared/logo.svg" alt="Space Logo" />
     <div class="h-line"></div>
     <nav>
-      <div class="menu-link" :class="{ active: home }">
-        <router-link class="router-link" to="/"> 00 HOME </router-link>
+      <div class="menu-link desktop tablet" :class="{ active: home }">
+        <router-link class="router-link" to="/">
+          <span class="desktop">00</span> HOME
+        </router-link>
       </div>
-      <div class="menu-link" :class="{ active: destination }">
+      <div class="menu-link desktop tablet" :class="{ active: destination }">
         <router-link class="router-link" to="/destination">
-          01 DESTINATION
+          <span class="desktop">01</span> DESTINATION
         </router-link>
       </div>
-      <div class="menu-link" :class="{ active: crew }">
-        <router-link class="router-link" to="/crew"> 02 CREW </router-link>
+      <div class="menu-link desktop tablet" :class="{ active: crew }">
+        <router-link class="router-link" to="/crew">
+          <span class="desktop">02</span> CREW
+        </router-link>
       </div>
-      <div class="menu-link" :class="{ active: technology }">
+      <div class="menu-link desktop tablet" :class="{ active: technology }">
         <router-link class="router-link" to="/technology">
-          03 TECHNOLOGY
+          <span class="desktop">03</span> TECHNOLOGY
         </router-link>
       </div>
+      <img
+        @click="showmenu"
+        class="mobile"
+        src="../assets/shared/icon-hamburger.svg"
+        alt="ham"
+      />
     </nav>
+    <Drawer @closed="closed" :style="{ display: drawer }" />
   </header>
 </template>
 
 <script>
+import Drawer from "./Drawer.vue";
 export default {
+  components: { Drawer },
   data() {
     return {
       home: true,
@@ -32,6 +45,7 @@ export default {
       crew: false,
       technology: false,
       deviceType: "desktop",
+      drawer: false,
     };
   },
   computed: {
@@ -62,16 +76,33 @@ export default {
       }
     },
   },
+
+  methods: {
+    showmenu() {
+      this.drawer = "flex";
+    },
+    closed() {
+      this.drawer = "none";
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 header {
   height: 96px;
   margin-top: 40px;
   margin-left: 55px;
   display: flex;
   align-items: center;
+}
+
+.visible {
+  display: flex;
+}
+
+.desktop {
+  display: inline;
 }
 
 .router-link {
@@ -81,6 +112,7 @@ header {
   align-items: center;
   letter-spacing: 2.7px;
   font-size: 16px;
+  display: block;
 }
 .menu-link.active {
   border-bottom: white 3px solid;
@@ -96,9 +128,9 @@ header {
 nav {
   height: 100%;
   backdrop-filter: blur(80px);
-  width: 56%;
+  width: 70%;
   display: flex;
-
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -107,6 +139,13 @@ nav {
   margin-left: 40px;
   flex-grow: 1;
   background-color: white;
+}
+
+.mobile {
+  display: none;
+}
+.desktop {
+  display: flex;
 }
 
 @media screen and (max-width: 800px) {
@@ -119,12 +158,36 @@ nav {
     font-size: 14px;
     justify-content: space-between;
   }
+
   .h-line {
     display: none;
   }
   .router-link {
     letter-spacing: default;
     font-size: 14px;
+  }
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    display: none;
+  }
+  nav {
+    justify-content: flex-end;
+    padding-right: 20px;
+    backdrop-filter: none;
   }
 }
 </style>

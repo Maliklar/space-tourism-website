@@ -101,4 +101,23 @@ p {
     margin-bottom: 80px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .slider-right > img {
+    width: 100%;
+  }
+  .slider-left > h1 {
+    font-size: 24px;
+  }
+
+  .slider-left > h2 {
+    font-size: 16px;
+  }
+  .slider-left > p {
+    font-size: 15px;
+  }
+  .crew-slider {
+    padding: 20px 20px 0 20px;
+  }
+}
 </style>

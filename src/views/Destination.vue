@@ -37,4 +37,18 @@ export default {
     margin-right: 97px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .destination-view {
+    flex: 1;
+    margin-top: 76px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .destination-view > h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+}
 </style>

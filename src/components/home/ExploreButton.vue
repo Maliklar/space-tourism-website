@@ -21,4 +21,12 @@ export default {};
   border: none;
   color: #0b0d17;
 }
+
+@media screen and (max-width: 600px) {
+  .explore-button {
+    height: 150px;
+    width: 150px;
+    font-size: 20px;
+  }
+}
 </style>

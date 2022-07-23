@@ -36,4 +36,12 @@ export default {
     margin-left: 0px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .technology-view > h1 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
 </style>

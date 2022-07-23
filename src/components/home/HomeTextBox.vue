@@ -73,5 +73,22 @@ export default {};
     margin: 0px;
     font-family: "Bellefair", serif;
   }
+
+  @media screen and (max-width: 500px) {
+    .home-text-box {
+      height: auto;
+      width: auto;
+    }
+    .home-text-box :first-child {
+      font-size: 16px;
+    }
+
+    .home-text-box > :nth-child(3) {
+      font-size: 15px;
+    }
+    .home-text-box > h1 {
+      font-size: 80px;
+    }
+  }
 }
 </style>

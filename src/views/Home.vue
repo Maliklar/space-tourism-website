@@ -37,5 +37,18 @@ export default {
     gap: 156px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .home-view {
+    flex-direction: column;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 </style>
     

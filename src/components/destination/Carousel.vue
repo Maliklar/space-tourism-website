@@ -122,4 +122,14 @@ p {
     gap: 0%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .carousel-details > h1 {
+    font-size: 56px;
+  }
+
+  div > img {
+    width: 100%;
+  }
+}
 </style>

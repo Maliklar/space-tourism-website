@@ -120,4 +120,20 @@ h1 {
     display: none;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .technology-slider-content {
+    margin: 20px;
+  }
+
+  .technology-slider-content > h3 {
+    font-size: 17px;
+  }
+  .technology-slider-content > h1 {
+    font-size: 24px;
+  }
+  .technology-slider-content > p {
+    font-size: 15px;
+  }
+}
 </style>

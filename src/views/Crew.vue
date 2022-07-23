@@ -38,4 +38,11 @@ export default {
     margin-right: 0px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .crew-view > h1 {
+    text-align: center;
+    font-size: 16px;
+  }
+}
 </style>
