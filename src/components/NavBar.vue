@@ -105,8 +105,26 @@ nav {
 .h-line {
   height: 1px;
   margin-left: 40px;
-
   flex-grow: 1;
   background-color: white;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    height: 96px;
+    margin-top: 0px;
+    margin-left: 39px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content: space-between;
+  }
+  .h-line {
+    display: none;
+  }
+  .router-link {
+    letter-spacing: default;
+    font-size: 14px;
+  }
 }
 </style>

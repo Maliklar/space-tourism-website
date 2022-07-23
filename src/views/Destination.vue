@@ -29,4 +29,12 @@ export default {
   font-size: 28px;
   letter-spacing: 4.725px;
 }
+@media screen and (max-width: 800px) {
+  .destination-view {
+    flex: 1;
+    margin-top: 76px;
+    margin-left: 97px;
+    margin-right: 97px;
+  }
+}
 </style>

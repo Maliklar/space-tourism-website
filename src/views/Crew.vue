@@ -31,4 +31,11 @@ export default {
   line-height: 34px;
   letter-spacing: 4.725px;
 }
+
+@media screen and (max-width: 800px) {
+  .crew-view {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 </style>

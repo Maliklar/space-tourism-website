@@ -60,7 +60,6 @@ export default {
   justify-content: center;
   background-color: transparent;
   opacity: 0.25;
-
   border: #ffffff solid 1px;
   color: white;
   font-family: "Bellefair";
@@ -75,5 +74,18 @@ export default {
   color: black;
   background-color: #ffffff;
   opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .slider-controller {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+  .controller-item {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+  }
 }
 </style>

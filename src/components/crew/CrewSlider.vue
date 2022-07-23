@@ -81,4 +81,24 @@ p {
 .slider-right {
   position: relative;
 }
+
+@media screen and (max-width: 800px) {
+  .crew-slider {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-height: 100%;
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .slider-left {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 80px;
+  }
+}
 </style>

@@ -12,8 +12,16 @@
     </div>
     <div class="right">
       <img
+        class="desktop"
         :src="
           require(`../../assets/technology/${$store.state.selectedTechnology.images.portrait}`)
+        "
+        alt="jsp"
+      />
+      <img
+        class="mobile"
+        :src="
+          require(`../../assets/technology/${$store.state.selectedTechnology.images.landscape}`)
         "
         alt="jsp"
       />
@@ -60,6 +68,12 @@ export default {
   text-transform: uppercase;
   color: #ffffff;
 }
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}
 h1 {
   margin: 0px;
 }
@@ -71,5 +85,39 @@ h1 {
   line-height: 32px;
   max-width: 88%;
   color: #d0d6f9;
+}
+
+@media screen and (max-width: 800px) {
+  .technology-slider-view {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .left {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    justify-content: center;
+  }
+  .technology-slider-content {
+    align-items: center;
+    text-align: center;
+  }
+  .technology-slider-content > p {
+    max-width: 100%;
+  }
+
+  .mobile {
+    display: block;
+  }
+  img.mobile {
+    width: 100%;
+  }
+  .desktop {
+    display: none;
+  }
 }
 </style>

@@ -76,4 +76,14 @@ export default {
 .tab-item.active {
   border-bottom: 2px white solid;
 }
+
+@media screen and (max-width: 800px) {
+  .carousel-tab {
+    display: flex;
+    justify-content: center;
+    margin: 53px 0px;
+    min-height: 34px;
+    gap: 35px;
+  }
+}
 </style>

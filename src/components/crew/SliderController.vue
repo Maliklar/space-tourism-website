@@ -60,4 +60,11 @@ export default {
 .controller-item.active {
   opacity: 1;
 }
+
+@media screen and (max-width: 800px) {
+  .slider-controller {
+    justify-content: center;
+    margin-top: 30px;
+  }
+}
 </style>

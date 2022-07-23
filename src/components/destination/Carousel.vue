@@ -103,4 +103,23 @@ p {
   text-transform: uppercase;
   color: #d0d6f9;
 }
+@media screen and (max-width: 800px) {
+  .destination-carousel {
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+  }
+  .carousel-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .travel-details {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0%;
+  }
+}
 </style>
